@@ -1,6 +1,6 @@
 {
   "name": "@kevinmarrec/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Kevin's ESLint config",
   "author": "Kevin Marrec <kevin@marrec.io> (https://github.com/kevinmarrec)",
   "license": "MIT",
