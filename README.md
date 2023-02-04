@@ -74,5 +74,5 @@ Published under the [MIT License](./LICENSE)
 [npm-version-href]: https://npmjs.com/package/@kevinmarrec/eslint-config
 [npm-downloads-src]: https://img.shields.io/npm/dm/@kevinmarrec/eslint-config?style=flat-square
 [npm-downloads-href]: https://npmjs.com/package/@kevinmarrec/eslint-config
-[github-actions-src]: https://img.shields.io/github/workflow/status/kevinmarrec/eslint-config/CI?style=flat-square
-[github-actions-href]: https://github.com/kevinmarrec/eslint-config/actions?query=workflow%3Aci
+[github-actions-src]: https://img.shields.io/github/actions/workflow/status/kevinmarrec/eslint-config/ci.yml?style=flat-square
+[github-actions-href]: https://github.com/kevinmarrec/eslint-config/actions/workflows/ci.yml
