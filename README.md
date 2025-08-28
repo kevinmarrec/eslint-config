@@ -1,78 +1,39 @@
 # @kevinmarrec/eslint-config
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Github Actions][github-actions-src]][github-actions-href]
+## Description
 
-> Based on [@antfu/eslint-config](https://github.com/antfu/eslint-config) by [Anthony Fu](https://github.com/antfu) :
-> - Single quotes, no semi
-> - Auto fix for formatting (aimed to be used standalone without Prettier)
-> - Designed to work with TypeScript, Vue out-of-box
-> - Lint also for json, yaml, markdown
-> - Sorted imports, dangling commas for cleaner commit diff
-> - Reasonable defaults, best practices, only one-line of config
+Opinionated [ESLint](https://eslint.org) config.
 
-Additionnally, this configuration overrides some rules to match my personal preferences :
+## Opinions
 
-- `@typescript-eslint/no-unused-vars` : Warning (`warn`) instead of Error (`error`)
-- `@typescript-eslint/space-before-function-paren` : Set to `always` for spaces before function parenthesis
+- Extends [@antfu/eslint-config](https://github.com/antfu/eslint-config) with [formatters](https://github.com/antfu/eslint-config?tab=readme-ov-file#formatters) & [UnoCSS](https://github.com/antfu/eslint-config?tab=readme-ov-file#unocss) support (`uno.config.ts` detection)
+  - with quite minor rule overrides:
+    - [import/consistent-type-specifier-style](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/consistent-type-specifier-style.md) is disabled
+    - [import/no-duplicates](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md) is overridden to prefer inline type imports
+    - [perfectionist/sort-imports](https://perfectionist.dev/rules/sort-imports.html) is overridden with custom groups order and enforced new lines between groups
+  - and some additional rules:
+    - [vue/no-unused-properties](https://eslint.vuejs.org/rules/no-unused-properties) is enabled
+
+- Disables [unsupported TypeScript version warning](https://typescript-eslint.io/packages/parser/#warnonunsupportedtypescriptversion)
+
+- Opinionated, but [very customizable](https://github.com/antfu/eslint-config?tab=readme-ov-file#customization)
 
 ## Usage
 
-### Install
+> Requires [ESLint](https://eslint.org) v9 _or later_.
 
-```bash
-pnpm add -D eslint @kevinmarrec/eslint-config
+### Default
+
+```ts
+// eslint.config.ts
+export { default } from '@kevinmarrec/eslint-config'
 ```
 
-### Config `.eslintrc`
+### Extended
 
-```json
-{
-  "extends": "@kevinmarrec"
-}
+```ts
+// eslint.config.ts
+import { useConfig } from '@kevinmarrec/eslint-config'
+
+export default useConfig({ /* options */ })
 ```
-
-### Add script for package.json
-
-For example:
-
-```json
-{
-  "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
-  }
-}
-```
-
-### Config VS Code auto fix
-
-Install [VS Code ESLint extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and create `.vscode/settings.json`
-
-```json
-{
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
-}
-```
-
-## Copyright
-
-This configuration is based on [@antfu/eslint-config](https://github.com/antfu/eslint-config) by [Anthony Fu](https://github.com/antfu)
-
-## License
-
-Made with ❤️
-
-Published under the [MIT License](./LICENSE)
-
-[npm-version-src]: https://img.shields.io/npm/v/@kevinmarrec/eslint-config?style=flat-square
-[npm-version-href]: https://npmjs.com/package/@kevinmarrec/eslint-config
-[npm-downloads-src]: https://img.shields.io/npm/dm/@kevinmarrec/eslint-config?style=flat-square
-[npm-downloads-href]: https://npmjs.com/package/@kevinmarrec/eslint-config
-[github-actions-src]: https://img.shields.io/github/actions/workflow/status/kevinmarrec/eslint-config/ci.yml?style=flat-square
-[github-actions-href]: https://github.com/kevinmarrec/eslint-config/actions/workflows/ci.yml
