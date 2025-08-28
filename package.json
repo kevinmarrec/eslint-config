@@ -10,7 +10,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kevinmarrec/eslint-config.git"
-
   },
   "keywords": [
     "eslint",
@@ -32,7 +31,7 @@
     "check:eslint": "eslint . --cache",
     "check:types": "tsc --noEmit",
     "check:unused": "knip -n",
-    "lint": "bun run check:eslint && bun run check:stylelint",
+    "lint": "bun run check:eslint",
     "lint:inspect": "bunx @eslint/config-inspector",
     "release": "bumpp",
     "test": "vitest",
