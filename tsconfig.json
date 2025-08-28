@@ -1,21 +1,5 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "jsx": "preserve",
-    "lib": ["ESNext"],
-    "moduleDetection": "force",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    "allowJs": true,
-    "strict": true,
-    "noFallthroughCasesInSwitch": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    "erasableSyntaxOnly": true,
-    "skipLibCheck": true
-  },
+  "extends": "@kevinmarrec/tsconfig",
   "exclude": [
     "**/coverage/**",
     "**/dist/**"

@@ -12,6 +12,7 @@
         "tinyglobby": "^0.2.14",
       },
       "devDependencies": {
+        "@kevinmarrec/tsconfig": "^1.0.0",
         "@types/bun": "^1.2.21",
         "@vitest/coverage-v8": "^3.2.4",
         "bumpp": "^10.2.3",
@@ -162,6 +163,8 @@
     "@jridgewell/sourcemap-codec": ["@jridgewell/sourcemap-codec@1.5.5", "", {}, "sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og=="],
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.30", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-GQ7Nw5G2lTu/BtHTKfXhKHok2WGetd4XYcVKGx00SjAk8GMwgJM3zr6zORiPGuOE+/vkc90KtTosSSvaCjKb2Q=="],
+
+    "@kevinmarrec/tsconfig": ["@kevinmarrec/tsconfig@1.0.0", "", {}, "sha512-2b5d4iWpYAM2yAzAlsL5GY5xb10Gz80SsP3BCIxcVo5VvN3dRnoEtvKTG/RUe0HrqX87xnDLrMdR4QWmys2kMA=="],
 
     "@napi-rs/wasm-runtime": ["@napi-rs/wasm-runtime@1.0.3", "", { "dependencies": { "@emnapi/core": "^1.4.5", "@emnapi/runtime": "^1.4.5", "@tybys/wasm-util": "^0.10.0" } }, "sha512-rZxtMsLwjdXkMUGC3WwsPwLNVqVqnTJT6MNIB6e+5fhMcSCPP0AOsNWuMQ5mdCq6HNjs/ZeWAEchpqeprqBD2Q=="],
 
