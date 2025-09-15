@@ -26,6 +26,11 @@ export function useConfig(options: Options = {}, ...userConfigs: UserConfig[]) {
       a11y: true,
       overrides: {
         'vue/no-unused-properties': 'error',
+        'vue-a11y/label-has-for': ['error', {
+          required: {
+            some: ['nesting', 'id'],
+          },
+        }],
       },
     },
     rules: {

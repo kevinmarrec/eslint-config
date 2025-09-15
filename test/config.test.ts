@@ -85,6 +85,33 @@ describe('config', async () => {
     expect(messages[0].message).toMatchInlineSnapshot(`"'foo' of property found, but never used."`)
   })
 
+  it('should not require inputs with labels to validate for both nesting and id checks (vue-a11y/label-has-for)', async () => {
+    const eslint = new ESLint({
+      fix: true,
+      overrideConfigFile: true,
+      overrideConfig: await useConfig({}),
+    })
+    const code = `
+    <template>
+      <div>
+        <label for="foo">Foo</label>
+        <input id="foo" />
+      </div>
+      <div>
+        <label>
+          <span>Foo</span>
+          <input />
+        </label>
+      </div>
+    </template>
+    `
+
+    const [{ errorCount, messages }] = await eslint.lintText(code, { filePath: 'vue.vue' })
+
+    expect(errorCount).toBe(0)
+    expect(messages).toMatchInlineSnapshot(`[]`)
+  })
+
   it('should ignore files, given "ignores" option', async () => {
     const eslint = new ESLint({
       overrideConfigFile: true,
