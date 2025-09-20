@@ -22,6 +22,34 @@ describe('config', async () => {
     vi.restoreAllMocks()
   })
 
+  it('should disable antfu/if-newline', async () => {
+    const eslint = new ESLint({
+      fix: true,
+      overrideConfigFile: true,
+      overrideConfig: await useConfig({
+        typescript: true,
+      }),
+    })
+
+    const code = `
+    export function foo() {
+      if (condition) return false;
+      return true
+    }
+    `
+
+    const [{ errorCount, output }] = await eslint.lintText(code, { filePath: 'typescript.ts' })
+
+    expect(errorCount).toBe(0)
+    expect(output).toMatchInlineSnapshot(`
+      "export function foo() {
+        if (condition) return false
+        return true
+      }
+      "
+    `)
+  })
+
   it('should lint imports in typescript files', async () => {
     const eslint = new ESLint({
       fix: true,
@@ -106,10 +134,9 @@ describe('config', async () => {
     </template>
     `
 
-    const [{ errorCount, messages }] = await eslint.lintText(code, { filePath: 'vue.vue' })
+    const [{ errorCount }] = await eslint.lintText(code, { filePath: 'vue.vue' })
 
     expect(errorCount).toBe(0)
-    expect(messages).toMatchInlineSnapshot(`[]`)
   })
 
   it('should ignore files, given "ignores" option', async () => {

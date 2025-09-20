@@ -8,6 +8,7 @@ Opinionated [ESLint](https://eslint.org) config.
 
 - Extends [@antfu/eslint-config](https://github.com/antfu/eslint-config) with [formatters](https://github.com/antfu/eslint-config?tab=readme-ov-file#formatters) & [UnoCSS](https://github.com/antfu/eslint-config?tab=readme-ov-file#unocss) support (`uno.config.ts` detection)
   - with quite minor rule overrides:
+    - [antfu/if-newline](https://github.com/antfu/eslint-plugin-antfu/blob/main/src/rules/if-newline.ts) is disabled
     - [import/consistent-type-specifier-style](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/consistent-type-specifier-style.md) is disabled
     - [import/no-duplicates](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-duplicates.md) is overridden to prefer inline type imports
     - [perfectionist/sort-imports](https://perfectionist.dev/rules/sort-imports.html) is overridden with custom groups order and enforced new lines between groups
