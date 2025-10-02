@@ -41,10 +41,10 @@
     "eslint": ">=9.20.0"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^5.4.0",
-    "@unocss/eslint-plugin": "^66.5.1",
+    "@antfu/eslint-config": "^5.4.1",
+    "@unocss/eslint-plugin": "^66.5.2",
     "defu": "^6.1.4",
-    "eslint-plugin-format": "^1.0.1",
+    "eslint-plugin-format": "^1.0.2",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "tinyglobby": "^0.2.15"
   },
