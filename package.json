@@ -1,7 +1,7 @@
 {
   "name": "@kevinmarrec/eslint-config",
   "type": "module",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "packageManager": "bun@1.2.22",
   "description": "Opinionated ESLint config.",
   "author": "Kevin Marrec <kevin@marrec.io>",
