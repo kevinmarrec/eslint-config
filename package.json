@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "^6.0.0",
-    "@unocss/eslint-plugin": "^66.5.3",
+    "@unocss/eslint-plugin": "^66.5.4",
     "defu": "^6.1.4",
     "eslint-plugin-format": "^1.0.2",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
