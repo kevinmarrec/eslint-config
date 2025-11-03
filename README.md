@@ -1,5 +1,8 @@
 # @kevinmarrec/eslint-config
 
+> [!IMPORTANT]  
+> Moved to https://github.com/kevinmarrec/config/tree/main/packages/eslint
+
 ## Description
 
 Opinionated [ESLint](https://eslint.org) config.
